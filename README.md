@@ -28,6 +28,7 @@
 * Make sure HSQL DB server is running before running the test case. (Download HSQL DB from https://sourceforge.net/projects/hsqldb/files/ )
 * Run individual test cases inside /HibernateSample/src/test/java/com/home/hibernate/test/HibernateTest.java as *JUnit test*.  
 * TestCase name is self explanatory  
+* Modify the hibernate.cfg.xml file as per your DB details  
 * After running the test case, check the console output to understand the flow  
 * Comment non related annotations (refer the entity class annotations and the test case)
 * Uncomment the required annotations(refer the entity class annotations and the test case)
