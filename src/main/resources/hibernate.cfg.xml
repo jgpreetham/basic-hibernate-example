@@ -7,9 +7,9 @@
 	<session-factory>
 		<!-- Connection settings -->
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://sas-fpt4zm8eprvlnut5.db.yandex.net:6432/db1?prepareThreshold=0</property>
-		<property name="hibernate.connection.username">user1</property>
-		<property name="hibernate.connection.password">12345678</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://POSTGRES_HOST:POSTGRES_PORT/POSTGRES_DATABASE?prepareThreshold=0</property>
+		<property name="hibernate.connection.username">POSTGRES_USER</property>
+		<property name="hibernate.connection.password">POSTGRES_PASSWORD</property>
 
 		<!-- SQL dialect -->
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL94Dialect</property>
