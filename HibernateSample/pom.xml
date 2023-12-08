@@ -15,6 +15,7 @@
 		<junit.version>4.12</junit.version>
 		<hibernate.version>5.1.0.Final</hibernate.version>
 		<hsqldb.verson>2.3.3</hsqldb.verson>
+		<posttgres.version>42.6.0</posttgres.version>
 	</properties>
 
 	<dependencies>
@@ -31,10 +32,16 @@
 			<version>${hibernate.version}</version>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>org.hsqldb</groupId>-->
+<!--			<artifactId>hsqldb</artifactId>-->
+<!--			<version>${hsqldb.verson}</version>-->
+<!--		</dependency>-->
+
 		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>${hsqldb.verson}</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${posttgres.version}</version>
 		</dependency>
 
 	</dependencies>

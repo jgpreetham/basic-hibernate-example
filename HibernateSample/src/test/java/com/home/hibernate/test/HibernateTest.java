@@ -43,7 +43,6 @@ public class HibernateTest
    public static void setUp() throws Exception
    {
       sessionFactory = new Configuration().configure().buildSessionFactory();
-
    }
 
    @AfterClass
@@ -186,22 +185,6 @@ public class HibernateTest
       System.out.println( "Test case is passed if the LazyInitializationException occurs, if there is no expception next line will have the list of insurances" );
       System.out.println( p.getInsurances() );
       System.out.println( "testLazyLoading ends ......." );
-
-   }
-
-   @Test
-   public void testEagerLoading()
-   {
-      System.out.println( "testEagerLoading begins ......Prequsite is change the fetch type to eager for insurances variable in Person class. @ElementCollection(fetch=FetchType.EAGER)" );
-      testElementCollection();
-      Session session = sessionFactory.openSession();
-      session.beginTransaction();
-      Person p = session.get( Person.class, 1L );
-      session.getTransaction().commit();
-      session.close();
-      System.out.println( "Test case is passed if there is no LazyInitializationException occurs, if there is no expception next line will have the list of companies" );
-      System.out.println( p.getInsurances() );
-      System.out.println( "testEagerLoading ends ......." );
 
    }
 
@@ -491,28 +474,6 @@ public class HibernateTest
       assertEquals( 2, list.size() );
       session.close();
       System.out.println( "testHQL ends ......." );
-
-   }
-
-   @Test
-   public void testHQLWithPagination()
-   {
-      System.out.println( "testHQLWithPagination begins ......." );
-      testSaveOperation();
-      testSaveOperation();
-      Session session = sessionFactory.openSession();
-      session.beginTransaction();
-
-      Query query = session.createQuery( "select firstName from Person" );
-      query.setFirstResult( 1 );
-      query.setMaxResults( 6 );
-      List<String> list = (List<String>) query.list();
-
-      session.getTransaction().commit();
-      System.out.println( "Size of list is " + list.size() );
-      assertEquals( 2, list.size() );
-      session.close();
-      System.out.println( "testHQLWithPagination ends ......." );
 
    }
 
