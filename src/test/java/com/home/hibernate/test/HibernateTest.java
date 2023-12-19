@@ -489,7 +489,7 @@ public class HibernateTest
       session.save( p2 );
       session.getTransaction().commit();
       Query query = session.getNamedQuery( "Phone.byName" );
-      query.setString( 0, "apple" );
+      query.setString( 1, "apple" );
       List<Phone> list = (List<Phone>) query.list();
       System.out.println( "Size of list is " + list.size() );
       assertEquals( 1, list.size() );

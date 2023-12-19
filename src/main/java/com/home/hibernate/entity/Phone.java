@@ -12,7 +12,7 @@ import javax.persistence.NamedQuery;
  * @author preetham
  */
 @Entity
-@NamedQuery( name = "Phone.byName", query = "from Phone where name=?" )
+@NamedQuery( name = "Phone.byName", query = "from Phone where name=?1" )
 @NamedNativeQuery( name = "Phone.byId", query = "select * from PHONE where PHONE_ID=:id", resultClass = Phone.class )
 public class Phone
 {
